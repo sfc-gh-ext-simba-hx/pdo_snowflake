@@ -177,6 +177,8 @@ jobs:
 
   build_test_debian13:
     name: build_test_debian13 (${{ matrix.php-version }}, ${{ matrix.os == 'ubuntu-latest' && 'x64' || 'arm64' }})
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
